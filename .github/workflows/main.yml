@@ -48,3 +48,9 @@ jobs:
             org.opencontainers.image.description=${{ github.event.repository.description }}
             org.opencontainers.image.url=${{ github.event.repository.html_url }}
             org.opencontainers.image.source=https://github.com/${{ steps.string_conversion.outputs.lowercase }}
+
+      - name: Delete oldest image from the GitHub Packages
+        uses: actions/delete-package-versions@v1
+        with:
+          package-name: ${{ github.event.repository.name }}/mariadb
+          token: ${{ secrets.REGISTRY_DELETE_TOKEN }}
