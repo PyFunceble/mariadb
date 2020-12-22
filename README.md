@@ -1,3 +1,3 @@
-# mariadb
+# MariaDB
 
-A repository which builds a custom image of MariaDB for our CI.
+A custom image of MariaDB for our CI.
