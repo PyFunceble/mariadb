@@ -43,3 +43,5 @@ jobs:
           tags: |
             ghcr.io/${{ steps.string_conversion.outputs.lowercase }}/mariadb:latest
             ghcr.io/${{ steps.string_conversion.outputs.lowercase }}/mariadb:${{ github.sha }}
+          labels: |
+            org.opencontainers.image.source https://github.com/${{ steps.string_conversion.outputs.lowercase }}
